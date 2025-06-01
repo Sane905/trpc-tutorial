@@ -1,0 +1,20 @@
+{
+  "name": "trpc-tutorial",
+  "version": "1.0.0",
+  "description": "tRPC tutorial with TypeScript monorepo structure",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspace server dev & yarn workspace client dev",
+    "build": "yarn workspace server build && yarn workspace client build",
+    "start": "yarn workspace server start",
+    "type-check": "yarn workspaces run type-check"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "packageManager": "yarn@3.6.0"
+}
